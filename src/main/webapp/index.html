@@ -219,11 +219,11 @@
                 document.head.appendChild(linkElem);
             }
         }
-        document.body.style.removeProperty('display');
     }
-    document.onreadystatechange = function () {
+    document.addEventListener("DOMContentLoaded", function (event) {
         activateCssLinks(document.head);
-    };
+        document.body.style.removeProperty('display');
+    });
 </script>
 
 </body>
